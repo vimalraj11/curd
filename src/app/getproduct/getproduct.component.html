@@ -1,0 +1,38 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>product Price </th>
+                <th>Product Description </th>
+                <th>Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of  products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.desc}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">EDIT</button>
+                    <button type="button" class="btn btn-info" routerLink="add">ADD</button>
+                    <button type="button" class="btn btn-danger" routerLink="delete">DELETE</button>
+                </td>
+            </tr>
+            <!-- <tr *ngFor="let product of  products">
+                <td>{{product.flight_number}}</td>
+                <td>{{product.mission_name}}</td>
+                <td>{{product.launch_year}}</td>
+                <td>{{product.launch_date_unix}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">EDIT</button>
+                    <button type="button" class="btn btn-info" routerLink="add">ADD</button>
+                    <button type="button" class="btn btn-danger" routerLink="delete">DELETE</button>
+                </td>
+            </tr> -->
+
+        </tbody>
+    </table>
+</div>
